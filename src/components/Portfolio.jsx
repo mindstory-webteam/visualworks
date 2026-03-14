@@ -113,12 +113,21 @@ const Portfolio = () => {
 
     @media (min-width: 768px) and (max-width: 1023px) {
         .iframe-wrapper {
-            padding-bottom: calc(177.78% - 80px);
+            padding-bottom: calc(177.78% - 120px);
         }
         .iframe-wrapper iframe {
             height: calc(100% + 75px);
         }
     }
+
+    @media (min-width: 400px) and (max-width: 640px) {
+        .iframe-wrapper {
+            padding-bottom: calc(177.78% - 192px);
+        }
+        .iframe-wrapper iframe {
+            height: calc(100% + 70px);
+        }
+
 `}</style>
 
             <header className="pt-32 pb-16 px-[5%] text-center max-w-5xl mx-auto">
