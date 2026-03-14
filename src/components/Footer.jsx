@@ -57,7 +57,7 @@ const Footer = () => {
 
           <div className="bg-white/5 border border-white/10 p-8 rounded-3xl hover:border-[#ff6b00]/50 transition-colors">
             <p className="text-[#ff6b00] font-bold uppercase tracking-widest text-xs mb-4">Locations</p>
-            <p className="text-xl font-semibold"> Kochi  Thrissur  Calicut  Dubai</p>
+            <p className="text-xl font-semibold"> Kochi • Thrissur • Calicut • Dubai</p>
           </div>
         </div>
 

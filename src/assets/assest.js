@@ -7,7 +7,6 @@ export const img = {
    mainlogo,
   }
 
-  // { id: 9, category: '', tag: '', link: 'https://www.youtube.com/embed/fpDGedpn9IE', industry: '' },
 
 export const portfolioData = [
     { id: 1, category: 'ai', tag: 'AI', link: 'https://www.instagram.com/reel/DVQrpwIANXE/embed', industry: 'education&edTech' },
@@ -41,7 +40,10 @@ export const portfolioData = [
     { id: 29, category: 'ai', tag: 'AI', link: 'https://www.instagram.com/reel/DVDQfoWkkbH/embed', industry: 'entertainment&media' },
     { id: 30, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DR3z_zflY_K/embed', industry: 'automobile' },
     { id: 31, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DRJ1aPfEdlL/embed', industry: 'food&beverage' },
-];
+    { id: 32, category: 'interview', tag: 'Interview', link: 'https://www.youtube.com/embed/kQn_NSt1AxQ', industry: 'entertainment&media' },
+
+]
+;
 
 export const industries = [
     { label: 'All Industries', value: 'all' },
