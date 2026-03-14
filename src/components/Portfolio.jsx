@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, SlidersHorizontal, X, Tag } from 'lucide-react';
 import Select from 'react-select';
-import {categories,industries,portfolioData} from '../assets/assest.js'
-
+import { categories, industries, portfolioData } from '../assets/assest.js'
 
 const Portfolio = () => {
     const [filter, setFilter] = useState('all');
@@ -88,12 +87,39 @@ const Portfolio = () => {
 
     return (
         <div className="bg-[#fafafa] min-h-screen font-sans overflow-x-hidden">
-            <style>{`
-                .hide-scroll::-webkit-scrollbar { display: none; }
-                .sheet-overlay { transition: opacity 0.3s ease; }
-                .sheet-content { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-                .card-anim { transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease; }
-            `}</style>
+     <style>{`
+    .hide-scroll::-webkit-scrollbar { display: none; }
+    .sheet-overlay { transition: opacity 0.3s ease; }
+    .sheet-content { transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease; }
+    .card-anim { transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease; }
+
+    .iframe-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: calc(177.78% - 85px);
+        border-radius: 2rem;
+        overflow: hidden;
+        background-color: #f9fafb;
+    }
+    .iframe-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 90px);
+        border: none;
+        overflow: hidden;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .iframe-wrapper {
+            padding-bottom: calc(177.78% - 80px);
+        }
+        .iframe-wrapper iframe {
+            height: calc(100% + 75px);
+        }
+    }
+`}</style>
 
             <header className="pt-32 pb-16 px-[5%] text-center max-w-5xl mx-auto">
                 <span className="inline-block px-4 py-1.5 bg-[#ff6b00]/10 text-[#ff6b00] border border-[#ff6b00]/30 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
@@ -176,13 +202,11 @@ const Portfolio = () => {
                     {filteredData.map((item) => (
                         <div
                             key={item.id}
-                            className="card-anim group bg-white p-3 rounded-[2.5rem] border border-gray-100 shadow-sm  hover:-translate-y-1"
+                            className="card-anim group bg-white p-3 rounded-[2.5rem] border border-gray-100 shadow-sm hover:-translate-y-1"
                         >
-                            <div className="relative aspect-9/16 rounded-4xl overflow-hidden bg-gray-50">
+                            <div className="iframe-wrapper">
                                 <iframe
                                     src={item.link}
-                                    className="absolute inset-0 w-full h-[101%] border-0"
-                                    style={{ overflow: 'hidden' }}
                                     scrolling="no"
                                     allowFullScreen
                                     loading="lazy"
@@ -209,20 +233,19 @@ const Portfolio = () => {
                 )}
             </section>
 
-            <div className={`md:hidden fixed bottom-4 left-4 right-4 z-50 transition-all duration-500`}>
+            <div className="md:hidden fixed bottom-4 left-4 right-4 z-50 transition-all duration-500">
                 <div className="bg-white/95 backdrop-blur-xl border border-gray-200 rounded-3xl shadow-2xl px-4 py-3 flex items-center justify-center gap-3">
                     <button
                         onClick={() => setShowCategorySheet(true)}
-                        className="flex-1 flex items-center justify-center gap-2  px-4 py-3 rounded-2xl text-sm font-bold text-gray-700 active:scale-95 transition-transform"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-2xl text-sm font-bold text-gray-700 active:scale-95 transition-transform"
                     >
                         <Tag size={14} className="text-[#ff6b00] shrink-0" />
                         <span className="truncate max-w-25">{activeCategoryLabel}</span>
                         <ChevronDown size={14} className="text-gray-400 shrink-0" />
                     </button>
-
                     <button
                         onClick={() => setShowIndustrySheet(true)}
-                        className="flex-1 flex items-center justify-center gap-2  px-4 py-3 rounded-2xl text-sm font-bold text-gray-700 active:scale-95 transition-transform"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-2xl text-sm font-bold text-gray-700 active:scale-95 transition-transform"
                     >
                         <SlidersHorizontal size={14} className="text-[#ff6b00] shrink-0" />
                         <span className="truncate max-w-25">{activeIndustryLabel}</span>
@@ -232,7 +255,7 @@ const Portfolio = () => {
             </div>
 
             <div className={`md:hidden fixed inset-0 z-60 ${showCategorySheet ? 'visible' : 'invisible'}`}>
-                <div 
+                <div
                     className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${showCategorySheet ? 'opacity-100' : 'opacity-0'}`}
                     onClick={() => setShowCategorySheet(false)}
                 />
@@ -263,7 +286,7 @@ const Portfolio = () => {
             </div>
 
             <div className={`md:hidden fixed inset-0 z-60 ${showIndustrySheet ? 'visible' : 'invisible'}`}>
-                <div 
+                <div
                     className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${showIndustrySheet ? 'opacity-100' : 'opacity-0'}`}
                     onClick={() => setShowIndustrySheet(false)}
                 />

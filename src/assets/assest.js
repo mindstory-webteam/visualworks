@@ -1,4 +1,4 @@
-import mindstorylogo from './mindstory-logo.avif';
+import mindstorylogo from './Mindstory.png';
 import mainlogo from './2151-logo.png'
 
 
@@ -35,8 +35,12 @@ export const portfolioData = [
     { id: 23, category: 'ai', tag: 'AI', link: 'https://www.instagram.com/reel/DVipfE0D_o0/embed', industry: 'fashion&lifestyle' },
     { id: 24, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DR1xECgD1yJ/embed', industry: 'automobile' },
     { id: 25, category: 'ai', tag: 'AI', link: 'https://www.instagram.com/reel/DSpwAXMkjnM/embed', industry: 'automobile' },
-    { id: 26, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DFXPfWbs3sB/embed', industry: 'automobile' },
-    { id: 27, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DH-_fAIJcL1/embed', industry: 'automobile' },
+    { id: 26, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DSXXbLnEtaR/embed', industry: 'automobile' },
+    { id: 27, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DFXPfWbs3sB/embed', industry: 'automobile' },
+    { id: 28, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DH-_fAIJcL1/embed', industry: 'automobile' },
+    { id: 29, category: 'ai', tag: 'AI', link: 'https://www.instagram.com/reel/DVDQfoWkkbH/embed', industry: 'entertainment&media' },
+    { id: 30, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DR3z_zflY_K/embed', industry: 'automobile' },
+    { id: 31, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DRJ1aPfEdlL/embed', industry: 'food&beverage' },
 ];
 
 export const industries = [
