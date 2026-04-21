@@ -42,6 +42,8 @@ export const portfolioData = [
     { id: 31, category: 'concept', tag: 'Concept', link: 'https://www.instagram.com/reel/DRJ1aPfEdlL/embed', industry: 'food&beverage' },
     { id: 32, category: 'concept', tag: 'Concept', link: 'https://www.youtube.com/embed/QjRnmIeut9w', industry: 'entertainment&media' },
     { id: 33, category: 'interview', tag: 'Interview', link: 'https://www.youtube.com/embed/kQn_NSt1AxQ', industry: 'entertainment&media' },
+    { id: 34, category: 'concept', tag: 'concept', link: 'https://www.instagram.com/reel/DWgx8m3CU1b/embed', industry: 'automobile' },
+    { id: 35, category: 'concept', tag: 'concept', link: 'https://www.instagram.com/reel/DWWd9v-zcDy/embed', industry: 'automobile' },
 
 ]
 ;
