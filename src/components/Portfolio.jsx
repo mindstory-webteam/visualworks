@@ -223,7 +223,7 @@ const Portfolio = () => {
                             </div>
                             <div className="p-6 flex justify-between items-center">
                                 <span className="text-[#ff6b00] text-[10px] font-black uppercase tracking-[0.2em] block">{item.tag}</span>
-                                <span className="text-gray-300 text-[9px] uppercase font-bold">{item.industry}</span>
+                                <span className="text-black text-[9px] uppercase font-bold">{item.industry}</span>
                             </div>
                         </div>
                     ))}
